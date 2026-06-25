@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RentalSphere Knowledge Base</title>
+<style>
+:root{
+  --or:#E8631A;--or-lt:#fff4ee;--or-bd:#fdd0b5;
+  --gn:#2e7d32;--gn-lt:#e8f5e9;--gn-bd:#c8e6c9;
+  --dk:#1a1a2e;--md:#252540;--bg:#f4f2ef;
+  --cb:#fff;--bdr:#e0d6cc;--tx:#1e1e1e;--mu:#666;
+  --rad:10px;--sh:0 2px 10px rgba(0,0,0,.07);--shh:0 5px 22px rgba(0,0,0,.13);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--tx);min-height:100vh}
+
+.hdr{background:var(--dk);padding:15px 22px;display:flex;align-items:center;gap:12px}
+.hdr-logo{font-size:1.28rem;font-weight:700;color:#fff;letter-spacing:-.3px}
+.hdr-logo span{color:var(--or)}
+.hdr-sub{font-size:.73rem;color:rgba(255,255,255,.42);margin-top:2px}
+
+.strip{background:var(--md);padding:17px 20px 13px;border-bottom:3px solid var(--or)}
+.sw{max-width:860px;margin:0 auto}
+.sbox{display:flex;border-radius:var(--rad);overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.2);margin-bottom:11px}
+.sico{background:#fff;display:flex;align-items:center;padding:0 11px;color:#bbb;font-size:1.05rem}
+#si{flex:1;border:none;outline:none;padding:11px 13px 11px 3px;font-size:.95rem;color:var(--tx);background:#fff}
+#si::placeholder{color:#bbb}
+.filters{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.fl{color:rgba(255,255,255,.48);font-size:.73rem;margin-right:2px}
+.chip{padding:4px 11px;border-radius:18px;border:1.5px solid rgba(255,255,255,.2);background:transparent;color:rgba(255,255,255,.68);font-size:.73rem;cursor:pointer;transition:all .14s;white-space:nowrap}
+.chip:hover{border-color:var(--or);color:#fff}
+.chip.on{background:var(--or);border-color:var(--or);color:#fff;font-weight:600}
+.lsel{padding:4px 26px 4px 9px;border-radius:18px;border:1.5px solid rgba(255,255,255,.2);background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='rgba(255,255,255,.4)'/%3E%3C/svg%3E") no-repeat right 8px center;color:rgba(255,255,255,.68);font-size:.73rem;cursor:pointer;-webkit-appearance:none;appearance:none}
+.lsel option{background:#252540;color:#fff}
+.lsel:focus{outline:none;border-color:var(--or)}
+
+.rw{max-width:880px;margin:0 auto;padding:15px 15px 50px}
+.rmeta{font-size:.78rem;color:var(--mu);margin-bottom:13px}
+.rmeta strong{color:var(--or)}
+
+.card{background:var(--cb);border-radius:var(--rad);box-shadow:var(--sh);padding:15px 17px 13px;margin-bottom:11px;border-left:4px solid transparent;cursor:pointer;transition:box-shadow .14s,transform .11s}
+.card:hover{box-shadow:var(--shh);transform:translateY(-1px)}
+.card.ep{border-left-color:var(--or)}
+.card.blog{border-left-color:var(--gn)}
+
+.ctop{display:flex;gap:8px;align-items:flex-start;margin-bottom:4px}
+.badge{font-size:.65rem;font-weight:700;padding:3px 8px;border-radius:9px;white-space:nowrap;flex-shrink:0;margin-top:3px;text-transform:uppercase;letter-spacing:.5px}
+.bric{background:var(--or-lt);color:var(--or);border:1px solid var(--or-bd)}
+.bblog{background:var(--gn-lt);color:var(--gn);border:1px solid var(--gn-bd)}
+.ctitle{font-size:.98rem;font-weight:700;color:var(--dk);line-height:1.35;flex:1}
+.csub{font-size:.76rem;color:var(--mu);margin-bottom:2px}
+.cmeta{font-size:.7rem;color:#999;margin-bottom:7px}
+.csum{font-size:.83rem;color:#3a3a3a;line-height:1.55;margin-bottom:7px}
+
+.nugs{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px}
+.nug{font-size:.68rem;background:var(--or-lt);border:1px solid var(--or-bd);color:#b84a00;padding:2px 7px;border-radius:8px;max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:7px}
+.tag{font-size:.67rem;background:var(--bg);border:1px solid var(--bdr);color:#555;padding:2px 6px;border-radius:6px;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tleg{background:#f0f3ff;border-color:#c5cfee;color:#3347b0}
+
+.cft{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.clink{font-size:.76rem;font-weight:600;color:var(--or);text-decoration:none}
+.clink:hover{text-decoration:underline}
+.cnote{font-size:.69rem;color:#999}
+.cnote a{color:var(--or);text-decoration:none}
+.cnote a:hover{text-decoration:underline}
+
+.empty{text-align:center;padding:70px 20px;color:var(--mu)}
+.empty h3{font-size:1.1rem;margin-bottom:7px;color:var(--dk)}
+
+.footer{background:var(--dk);color:rgba(255,255,255,.42);text-align:center;padding:15px;font-size:.73rem}
+.footer a{color:var(--or);text-decoration:none}
+
+mark{background:#fff3cd;color:inherit;border-radius:2px;padding:0 1px}
+
+@media(max-width:560px){
+  .ctop{flex-direction:column;gap:4px}
+  .filters{gap:5px}
+}
+
+.loading{text-align:center;padding:70px 20px;color:var(--mu)}
+.error{background:#fff3f3;border:1px solid #f0b4b4;color:#8a1f1f;border-radius:var(--rad);padding:18px;margin-bottom:15px}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div>
+    <div class="hdr-logo">Rental<span>Sphere</span> Knowledge Base</div>
+    <div class="hdr-sub" id="sub">Loading searchable archive…</div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="sw">
+    <div class="sbox">
+      <div class="sico">🔍</div>
+      <input type="text" id="si" placeholder="Search topics, legislation, problems, keywords…" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="filters">
+      <span class="fl">Show:</span>
+      <button class="chip on" data-t="all" id="chipAll">All</button>
+      <button class="chip" data-t="episode" id="chipEpisode">🎓 Inner Circle</button>
+      <button class="chip" data-t="blog" id="chipBlog">📝 Blog</button>
+      <span class="fl" style="margin-left:5px">Legislation:</span>
+      <select class="lsel" id="lf">
+        <option value="">Any legislation</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="rw">
+  <div class="rmeta">Showing <strong id="cnt">0</strong> resources</div>
+  <div id="res"><div class="loading">Loading archive…</div></div>
+</div>
+
+<div class="footer">
+  RentalSphere Knowledge Base &nbsp;|&nbsp;
+  <a href="https://rentalsphere.co.za/ric" target="_blank">Join the Inner Circle</a> &nbsp;|&nbsp;
+  <a href="https://rentalsphere.co.za" target="_blank">rentalsphere.co.za</a>
+</div>
+
+<script>
+let D = [];
+let aT='all', aL='', aQ='';
+
+function x(s){
+  if(!s)return'';
+  return String(s)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;')
+    .replace(/'/g,'&#039;');
+}
+
+function safeUrl(url){
+  try {
+    const u = new URL(url, window.location.href);
+    return ['http:', 'https:'].includes(u.protocol) ? u.href : '#';
+  } catch(e) {
+    return '#';
+  }
+}
+
+function hl(t,q){
+  if(!q||!t)return x(t);
+  const terms=q.trim().split(/\s+/).filter(Boolean);
+  let o=x(t);
+  terms.forEach(t=>{
+    const re=new RegExp('('+t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
+    o=o.replace(re,'<mark>$1</mark>');
+  });
+  return o;
+}
+
+function updateCounts(){
+  const total = D.length;
+  const episodes = D.filter(e => e.type === 'episode').length;
+  const blogs = D.filter(e => e.type === 'blog').length;
+
+  document.getElementById('sub').textContent =
+    `Search ${episodes} Inner Circle episodes & ${blogs} blog articles`;
+
+  document.getElementById('chipAll').textContent = `All (${total})`;
+  document.getElementById('chipEpisode').textContent = `🎓 Inner Circle (${episodes})`;
+  document.getElementById('chipBlog').textContent = `📝 Blog (${blogs})`;
+}
+
+function populateLegislation(){
+  const select = document.getElementById('lf');
+  const legislation = [...new Set(D.flatMap(e => Array.isArray(e.leg) ? e.leg : []))]
+    .filter(Boolean)
+    .sort((a,b) => a.localeCompare(b));
+
+  legislation.forEach(item => {
+    const opt = document.createElement('option');
+    opt.value = item;
+    opt.textContent = item;
+    select.appendChild(opt);
+  });
+}
+
+function render(){
+  const q=aQ.trim().toLowerCase();
+  const terms=q?q.split(/\s+/).filter(Boolean):[];
+
+  let list=D.filter(e=>{
+    if(aT!=='all'&&e.type!==aT)return false;
+    if(aL&&!(Array.isArray(e.leg) && e.leg.includes(aL)))return false;
+    if(terms.length){
+      const searchText = String(e.s || '').toLowerCase();
+      return terms.every(t=>searchText.includes(t));
+    }
+    return true;
+  });
+
+  if(q)list.sort((a,b)=>{
+    const at=String(a.title || '').toLowerCase().includes(q)?0:1;
+    const bt=String(b.title || '').toLowerCase().includes(q)?0:1;
+    return at-bt;
+  });
+
+  document.getElementById('cnt').textContent=list.length;
+  const el=document.getElementById('res');
+
+  if(!list.length){
+    el.innerHTML='<div class="empty"><h3>No results found</h3><p>Try different keywords or clear the filters.</p></div>';
+    return;
+  }
+
+  el.innerHTML=list.map(e=>{
+    const tH=hl(e.title,aQ);
+    const sH=hl(e.summary,aQ);
+    const url = safeUrl(e.url || 'https://rentalsphere.co.za/ric');
+    const nugH=(e.nuggets || []).length
+      ?'<div class="nugs">'+e.nuggets.map(n=>`<span class="nug">${x(n)}</span>`).join('')+'</div>'
+      :'';
+
+    const tagH='<div class="tags">'+
+      (e.leg || []).slice(0,3).map(l=>`<span class="tag tleg">⚖️ ${x(l)}</span>`).join('')+
+      (e.topics || []).slice(0,3).map(t=>`<span class="tag">${x(t)}</span>`).join('')+
+      '</div>';
+
+    const ftH=e.member
+      ?`<div class="cft"><a class="clink" href="https://rentalsphere.co.za/ric" target="_blank" rel="noopener" onclick="event.stopPropagation()">View in Inner Circle →</a><span class="cnote">🔒 Members only — <a href="https://rentalsphere.co.za/ric-plans/" target="_blank" rel="noopener" onclick="event.stopPropagation()">join here</a></span></div>`
+      :`<div class="cft"><a class="clink" href="${x(url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Read article →</a></div>`;
+
+    return `<div class="card ${e.type==='episode'?'ep':'blog'}" data-url="${x(url)}" role="link" tabindex="0">
+      <div class="ctop"><span class="badge b${x(e.bc || '')}">${x(e.badge || '')}</span><div class="ctitle">${tH}</div></div>
+      <div class="csub">${x(e.subtitle)}</div>
+      ${e.meta?`<div class="cmeta">${x(e.meta)}</div>`:''}
+      ${nugH}
+      <div class="csum">${sH}</div>
+      ${tagH}
+      ${ftH}
+    </div>`;
+  }).join('');
+
+  el.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => window.open(card.dataset.url, '_blank', 'noopener'));
+    card.addEventListener('keydown', e => {
+      if(e.key === 'Enter') window.open(card.dataset.url, '_blank', 'noopener');
+    });
+  });
+}
+
+async function loadArchive(){
+  const el=document.getElementById('res');
+  try {
+    const response = await fetch('./data/archive.json?v=' + Date.now(), { cache: 'no-store' });
+    if(!response.ok) throw new Error('Could not load archive.json');
+    D = await response.json();
+    updateCounts();
+    populateLegislation();
+    render();
+  } catch (err) {
+    el.innerHTML = `<div class="error"><strong>Archive could not be loaded.</strong><br>Check that <code>data/archive.json</code> exists in the GitHub repo and GitHub Pages is enabled.</div>`;
+    console.error(err);
+  }
+}
+
+let tmr;
+document.getElementById('si').addEventListener('input',e=>{
+  clearTimeout(tmr);
+  tmr=setTimeout(()=>{aQ=e.target.value;render()},160);
+});
+
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');
+  aT=b.dataset.t;
+  render();
+}));
+
+document.getElementById('lf').addEventListener('change',e=>{
+  aL=e.target.value;
+  render();
+});
+
+loadArchive();
+</script>
+</body>
+</html>
