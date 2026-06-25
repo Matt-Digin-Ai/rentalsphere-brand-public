@@ -1,0 +1,18 @@
+[
+  {
+    "id": "PLACEHOLDER",
+    "type": "blog",
+    "title": "Archive data pending upload",
+    "subtitle": "Replace this file with the generated archive JSON",
+    "meta": "",
+    "badge": "Blog Article",
+    "bc": "blog",
+    "summary": "The app is installed. Replace data/archive.json with the generated archive file to display the full searchable archive.",
+    "nuggets": [],
+    "topics": ["Setup"],
+    "leg": [],
+    "url": "https://rentalsphere.co.za",
+    "member": false,
+    "s": "archive data pending upload setup"
+  }
+]
