@@ -8,6 +8,7 @@
 :root{
   --accent:#E8631A;--accent-soft:#fff4ee;--accent-border:#fdd0b5;
   --secondary:#2e7d32;--secondary-soft:#e8f5e9;--secondary-border:#c8e6c9;
+  --course:#8a5bd6;--course-soft:#f3edfc;--course-border:#d9c8f2;
   --head:#1a1a2e;--head-2:#17172a;--bar:#252540;--bg:#f4f2ef;
   --card:#fff;--border:#e0d6cc;--text:#1e1e1e;--muted:#666;
   --radius:10px;--shadow:0 2px 10px rgba(0,0,0,.07);--shadow-hover:0 5px 22px rgba(0,0,0,.13);
@@ -16,6 +17,7 @@
 :root[data-theme="trainingclub"]{
   --accent:#ff8a2a;--accent-soft:#fff3e8;--accent-border:#ffd3a8;
   --secondary:#12b7d8;--secondary-soft:#e9fbff;--secondary-border:#b8eef8;
+  --course:#0667a5;--course-soft:#eaf4fb;--course-border:#bcdcf0;
   --head:#053b66;--head-2:#032f52;--bar:#0a4977;--bg:#f6f9fc;
   --card:#fff;--border:#d7e6f0;--text:#09233c;--muted:#6d8294;
   --radius:14px;--shadow:0 4px 16px rgba(5,59,102,.08);--shadow-hover:0 8px 28px rgba(5,59,102,.16);
@@ -34,6 +36,8 @@ body{font-family:'Segoe UI',system-ui,-apple-system,BlinkMacSystemFont,sans-seri
 .sico{background:#fff;display:flex;align-items:center;padding:0 13px;color:#8aa2b5;font-size:1.05rem}
 #si{flex:1;border:none;outline:none;padding:14px 15px 14px 3px;font-size:1rem;color:var(--text);background:#fff}
 #si::placeholder{color:#a9b7c4}
+#sclr{border:none;background:#fff;color:#8aa2b5;font-size:1.15rem;padding:0 14px;cursor:pointer;display:none;line-height:1}
+#sclr:hover{color:var(--accent)}
 .filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .fl{color:rgba(255,255,255,.6);font-size:.76rem;margin-right:2px}
 .chip{padding:6px 14px;border-radius:999px;border:1.5px solid rgba(255,255,255,.22);background:rgba(255,255,255,.04);color:rgba(255,255,255,.78);font-size:.76rem;cursor:pointer;transition:all .14s;white-space:nowrap}
@@ -42,29 +46,46 @@ body{font-family:'Segoe UI',system-ui,-apple-system,BlinkMacSystemFont,sans-seri
 .lsel{padding:6px 32px 6px 12px;border-radius:999px;border:1.5px solid rgba(255,255,255,.22);background:rgba(255,255,255,.04);color:rgba(255,255,255,.78);font-size:.76rem;cursor:pointer;min-width:260px;max-width:100%}
 .lsel option{background:var(--bar);color:#fff}
 .lsel:focus{outline:none;border-color:var(--accent)}
+.fbar{background:var(--card);border-bottom:1px solid var(--border);padding:16px 34px}
+.fbw{width:100%;max-width:var(--content-max);margin:0 auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.forb{width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 32% 28%,var(--head),var(--head-2) 78%);position:relative;flex-shrink:0;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(5,59,102,.28);animation:ffloat 4.5s ease-in-out infinite}
+.forb svg{width:22px;height:22px}
+.forb::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--secondary);opacity:.55;animation:fpulse 2.6s ease-out infinite}
+@keyframes fpulse{0%{transform:scale(.85);opacity:.55}70%{transform:scale(1.22);opacity:0}100%{transform:scale(1.22);opacity:0}}
+@keyframes ffloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.fmsg{font-size:.9rem;color:var(--text);line-height:1.45;flex:1;min-width:200px}
+.fmsg strong{color:var(--head)}
+.fmsg b{color:var(--accent)}
+.fex{display:flex;flex-wrap:wrap;gap:7px;width:100%}
+.fex-l{font-size:.72rem;color:var(--muted);align-self:center;margin-right:2px}
+.fchip{padding:6px 13px;border-radius:999px;border:1.5px solid var(--accent-border);background:var(--accent-soft);color:var(--accent);font-size:.75rem;font-weight:700;cursor:pointer;transition:all .14s;white-space:nowrap}
+.fchip:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
 .rw{width:100%;max-width:var(--content-max);margin:0 auto;padding:24px 34px 58px}
-.rmeta{font-size:.8rem;color:var(--muted);margin-bottom:14px}
-.rmeta strong{color:var(--accent)}
 .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 24px 18px;margin-bottom:14px;border-left:5px solid transparent;border-top:1px solid rgba(5,59,102,.04);border-right:1px solid rgba(5,59,102,.04);border-bottom:1px solid rgba(5,59,102,.04);cursor:pointer;transition:box-shadow .14s,transform .11s}
 .card:hover{box-shadow:var(--shadow-hover);transform:translateY(-1px)}
 .card.ep{border-left-color:var(--accent)}
 .card.blog{border-left-color:var(--secondary)}
+.card.course{border-left-color:var(--course)}
 .ctop{display:flex;gap:10px;align-items:flex-start;margin-bottom:5px}
 .badge{font-size:.65rem;font-weight:800;padding:4px 9px;border-radius:999px;white-space:nowrap;flex-shrink:0;margin-top:2px;text-transform:uppercase;letter-spacing:.45px}
 .bric{background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent-border)}
 .bblog{background:var(--secondary-soft);color:var(--secondary);border:1px solid var(--secondary-border)}
+.bcourse{background:var(--course-soft);color:var(--course);border:1px solid var(--course-border)}
 .ctitle{font-size:1.02rem;font-weight:800;color:var(--head);line-height:1.35;flex:1}
 .csub{font-size:.78rem;color:var(--muted);margin-bottom:3px}
 .cmeta{font-size:.72rem;color:#8a9aaa;margin-bottom:8px}
 .csum{font-size:.86rem;color:#334;line-height:1.58;margin-bottom:8px}
 .nugs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:7px}
 .nug{font-size:.7rem;background:var(--accent-soft);border:1px solid var(--accent-border);color:#b84a00;padding:3px 8px;border-radius:999px;max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
 .tag{font-size:.69rem;background:var(--bg);border:1px solid var(--border);color:#526475;padding:3px 7px;border-radius:8px;max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .tleg{background:#f0f7ff;border-color:#c3daef;color:#1c5c91}
 .cft{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.clink{font-size:.78rem;font-weight:800;color:var(--accent);text-decoration:none}
-.clink:hover{text-decoration:underline}
+.cbtn{display:inline-block;font-size:.78rem;font-weight:800;color:#fff;background:var(--accent);border:1.5px solid var(--accent);padding:8px 17px;border-radius:999px;text-decoration:none;transition:all .14s;box-shadow:0 3px 10px rgba(232,99,26,.22)}
+.cbtn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.cbtn.sec{background:transparent;color:var(--secondary);border-color:var(--secondary);box-shadow:none}
+.cbtn.sec:hover{background:var(--secondary);color:#fff}
+.cbtn.crs{background:var(--course);border-color:var(--course);box-shadow:0 3px 10px rgba(6,103,165,.22)}
 .cnote{font-size:.7rem;color:#8a9aaa}
 .cnote a{color:var(--accent);text-decoration:none}
 .cnote a:hover{text-decoration:underline}
@@ -76,7 +97,7 @@ mark{background:#fff3cd;color:inherit;border-radius:3px;padding:0 2px}
 .loading{text-align:center;padding:70px 20px;color:var(--muted)}
 .error{background:#fff3f3;border:1px solid #f0b4b4;color:#8a1f1f;border-radius:var(--radius);padding:18px;margin-bottom:15px}
 @media(max-width:700px){
-  .hdr,.strip{padding-left:18px;padding-right:18px}
+  .hdr,.strip,.fbar{padding-left:18px;padding-right:18px}
   .rw{padding:18px 14px 44px}
   .ctop{flex-direction:column;gap:5px}
   .card{padding:16px 16px 14px}
@@ -96,6 +117,7 @@ mark{background:#fff3cd;color:inherit;border-radius:3px;padding:0 2px}
     <div class="sbox">
       <div class="sico">🔍</div>
       <input type="text" id="si" placeholder="Search topics, legislation, problems, keywords…" autocomplete="off" spellcheck="false">
+      <button id="sclr" type="button" title="Clear search" aria-label="Clear search">✕</button>
     </div>
     <div class="filters">
       <span class="fl">Show:</span>
@@ -107,13 +129,27 @@ mark{background:#fff3cd;color:inherit;border-radius:3px;padding:0 2px}
     </div>
   </div>
 </div>
+<div class="fbar">
+  <div class="fbw">
+    <div class="forb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 11.2 12 4l9 7.2" stroke="#ff8a2a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.4 10.4V19a1 1 0 0 0 1 1h11.2a1 1 0 0 0 1-1v-8.6" stroke="#ff8a2a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.8 20v-5.4h4.4V20" stroke="#26dcfd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="fmsg" id="fmsg"><strong>Hi, I'm Fundi 👋</strong> — tell me what you need help with, or tap a topic below.</div>
+    <div class="fex" id="fex">
+      <span class="fex-l">Try:</span>
+      <button class="fchip" data-q="lease renewals">Lease renewals</button>
+      <button class="fchip" data-q="deposit">Deposit disputes</button>
+      <button class="fchip" data-q="tenant vetting">Tenant vetting</button>
+      <button class="fchip" data-q="rental housing act">Rental Housing Act</button>
+      <button class="fchip" data-q="maintenance">Maintenance</button>
+      <button class="fchip" data-q="leads">Getting more leads</button>
+    </div>
+  </div>
+</div>
 <div class="rw">
-  <div class="rmeta">Showing <strong id="cnt">0</strong> resources</div>
   <div id="res"><div class="loading">Loading archive…</div></div>
 </div>
 <div class="footer">
   <span id="footerBrand">RentalSphere Knowledge Base</span> &nbsp;|&nbsp;
-  <a href="https://rentalsphere.co.za/ric" target="_blank" rel="noopener">Join the Inner Circle</a> &nbsp;|&nbsp;
+  <a href="https://rentalsphere.co.za/ric" target="_blank" rel="noopener" id="footJoin">Join the Inner Circle</a> &nbsp;|&nbsp;
   <a href="https://rentalsphere.co.za" target="_blank" rel="noopener">rentalsphere.co.za</a>
 </div>
 <script>
@@ -123,16 +159,23 @@ if(['rtc','training','trainingclub','rentaltrainingclub','rentaltraining'].inclu
 document.documentElement.dataset.theme=theme;
 if((params.get('width')||'full').toLowerCase()==='contained') document.documentElement.dataset.width='contained';
 const BRAND={
-  rentalsphere:{title:'Rental<span>Sphere</span> Knowledge Base',footer:'RentalSphere Knowledge Base'},
-  trainingclub:{title:'Rental <span>Training Club</span> Knowledge Base',footer:'Rental Training Club Knowledge Base'}
+  rentalsphere:{title:'Rental<span>Sphere</span> Knowledge Base',footer:'RentalSphere Knowledge Base',join:'https://rentalsphere.co.za/ric-plans/'},
+  trainingclub:{title:'Rental <span>Training Club</span> Knowledge Base',footer:'Rental Training Club Knowledge Base',join:'https://ic.rentalsphere.co.za/pricing/'}
 };
+const JOIN=BRAND[theme].join;
 document.getElementById('brandTitle').innerHTML=BRAND[theme].title;
 document.getElementById('footerBrand').textContent=BRAND[theme].footer;
+document.getElementById('footJoin').href=JOIN;
 let D=[],aT='all',aL='',aQ='';
 function x(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;')}
 function safeUrl(url){try{const u=new URL(url,location.href);return ['http:','https:'].includes(u.protocol)?u.href:'#'}catch(e){return '#'}}
 function searchText(e){return String(e.s||[e.title,e.subtitle,e.meta,e.summary,...(e.topics||[]),...(e.leg||[])].join(' ')).toLowerCase()}
 function hl(t,q){if(!q||!t)return x(t);let o=x(t);q.trim().split(/\s+/).filter(Boolean).forEach(term=>{const re=new RegExp('('+term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');o=o.replace(re,'<mark>$1</mark>')});return o}
+function itemDate(e){
+  const cands=[...String(e.meta||'').split('·'),String(e.subtitle||'')];
+  for(const c of cands){const t=Date.parse(c.trim());if(!isNaN(t))return t}
+  return 0;
+}
 function updateCounts(){
   const total=D.length,episodes=D.filter(e=>e.type==='episode').length,blogs=D.filter(e=>e.type==='blog').length;
   document.getElementById('sub').textContent=`Search ${episodes} Inner Circle episodes & ${blogs} blog articles`;
@@ -147,6 +190,17 @@ function populateLegislation(){
     const opt=document.createElement('option');opt.value=item;opt.textContent=item;select.appendChild(opt);
   });
 }
+function fundiSay(n){
+  const el=document.getElementById('fmsg'),q=aQ.trim();
+  if(q)el.innerHTML=`<strong>Fundi found <b>${n}</b> resource${n===1?'':'s'}</strong> for “${x(q)}” — or try another topic below.`;
+  else if(aL||aT!=='all')el.innerHTML=`<strong>Fundi found <b>${n}</b> resource${n===1?'':'s'}</strong> for you — search above to narrow it down.`;
+  else el.innerHTML=`<strong>Hi, I'm Fundi 👋</strong> — tell me what you need help with, or tap a topic below. <b>${n}</b> resources ready.`;
+}
+function cardFoot(e,url){
+  if(e.member)return `<div class="cft"><a class="cbtn" href="${x(JOIN)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Join the Inner Circle →</a><span class="cnote">🔒 Members-only episode</span></div>`;
+  if(e.type==='course')return `<div class="cft"><a class="cbtn crs" href="${x(url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Purchase This Course →</a></div>`;
+  return `<div class="cft"><a class="cbtn sec" href="${x(url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Read Article →</a></div>`;
+}
 function render(){
   const q=aQ.trim().toLowerCase(),terms=q?q.split(/\s+/).filter(Boolean):[];
   let list=D.filter(e=>{
@@ -156,24 +210,43 @@ function render(){
     return true;
   });
   if(q)list.sort((a,b)=>(String(a.title||'').toLowerCase().includes(q)?0:1)-(String(b.title||'').toLowerCase().includes(q)?0:1));
-  document.getElementById('cnt').textContent=list.length;
+  else list.sort((a,b)=>itemDate(b)-itemDate(a));
+  fundiSay(list.length);
+  document.getElementById('sclr').style.display=aQ?'block':'none';
   const el=document.getElementById('res');
   if(!list.length){el.innerHTML='<div class="empty"><h3>No results found</h3><p>Try different keywords or clear the filters.</p></div>';return}
   el.innerHTML=list.map(e=>{
-    const url=safeUrl(e.url||'https://rentalsphere.co.za/ric');
+    const rawUrl=safeUrl(e.url||JOIN);
+    const url=e.member?JOIN:rawUrl;
+    const cls=e.type==='episode'?'ep':(e.type==='course'?'course':'blog');
+    const bcls=e.type==='episode'?'bric':(e.type==='course'?'bcourse':'bblog');
     const nugH=(e.nuggets||[]).length?'<div class="nugs">'+e.nuggets.map(n=>`<span class="nug">${x(n)}</span>`).join('')+'</div>':'';
     const tagH='<div class="tags">'+(e.leg||[]).slice(0,3).map(l=>`<span class="tag tleg">⚖️ ${x(l)}</span>`).join('')+(e.topics||[]).slice(0,4).map(t=>`<span class="tag">${x(t)}</span>`).join('')+'</div>';
-    const ftH=e.member?`<div class="cft"><a class="clink" href="https://rentalsphere.co.za/ric" target="_blank" rel="noopener" onclick="event.stopPropagation()">View in Inner Circle →</a><span class="cnote">🔒 Members only — <a href="https://rentalsphere.co.za/ric-plans/" target="_blank" rel="noopener" onclick="event.stopPropagation()">join here</a></span></div>`:`<div class="cft"><a class="clink" href="${x(url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Read article →</a></div>`;
-    return `<div class="card ${e.type==='episode'?'ep':'blog'}" data-url="${x(url)}" role="link" tabindex="0"><div class="ctop"><span class="badge ${e.type==='episode'?'bric':'bblog'}">${x(e.badge||'')}</span><div class="ctitle">${hl(e.title,aQ)}</div></div><div class="csub">${x(e.subtitle)}</div>${e.meta?`<div class="cmeta">${x(e.meta)}</div>`:''}${nugH}<div class="csum">${hl(e.summary,aQ)}</div>${tagH}${ftH}</div>`;
+    return `<div class="card ${cls}" data-url="${x(url)}" role="link" tabindex="0"><div class="ctop"><span class="badge ${bcls}">${x(e.badge||'')}</span><div class="ctitle">${hl(e.title,aQ)}</div></div><div class="csub">${x(e.subtitle)}</div>${e.meta?`<div class="cmeta">${x(e.meta)}</div>`:''}${nugH}<div class="csum">${hl(e.summary,aQ)}</div>${tagH}${cardFoot(e,url)}</div>`;
   }).join('');
   el.querySelectorAll('.card').forEach(card=>{card.addEventListener('click',()=>window.open(card.dataset.url,'_blank','noopener'));card.addEventListener('keydown',e=>{if(e.key==='Enter')window.open(card.dataset.url,'_blank','noopener')})});
 }
+function setQuery(q){
+  aQ=q;document.getElementById('si').value=q;render();
+}
 async function loadArchive(){
   const el=document.getElementById('res');
-  try{const r=await fetch('./data/archive.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('Could not load archive.json');D=await r.json();updateCounts();populateLegislation();render()}catch(err){el.innerHTML='<div class="error"><strong>Archive could not be loaded.</strong><br>Check that <code>data/archive.json</code> exists in the GitHub repo and GitHub Pages is enabled.</div>';console.error(err)}
+  try{
+    const r=await fetch('./data/archive.json?v='+Date.now(),{cache:'no-store'});
+    if(!r.ok)throw new Error('Could not load archive.json');
+    D=await r.json();updateCounts();populateLegislation();
+    const pq=params.get('q')||params.get('s')||'';
+    const pt=(params.get('type')||'').toLowerCase();
+    if(['episode','blog','course'].includes(pt)){
+      aT=pt;document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c.dataset.t===pt));
+    }
+    if(pq){setQuery(pq)}else{render()}
+  }catch(err){el.innerHTML='<div class="error"><strong>Archive could not be loaded.</strong><br>Check that <code>data/archive.json</code> exists in the GitHub repo and GitHub Pages is enabled.</div>';console.error(err)}
 }
 let tmr;document.getElementById('si').addEventListener('input',e=>{clearTimeout(tmr);tmr=setTimeout(()=>{aQ=e.target.value;render()},160)});
+document.getElementById('sclr').addEventListener('click',()=>{setQuery('');document.getElementById('si').focus()});
 document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');aT=b.dataset.t;render()}));
+document.querySelectorAll('.fchip').forEach(b=>b.addEventListener('click',()=>setQuery(b.dataset.q)));
 document.getElementById('lf').addEventListener('change',e=>{aL=e.target.value;render()});
 loadArchive();
 </script>
