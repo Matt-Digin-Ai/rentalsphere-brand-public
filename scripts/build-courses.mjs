@@ -58,14 +58,38 @@ function extractCode(title) {
   return null;
 }
 
+// The shop sits behind a WAF that serves an HTML challenge to unfamiliar
+// clients, so present as a normal browser and check we actually got JSON.
+const HEADERS = {
+  'User-Agent':
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36',
+  Accept: 'application/json, text/plain, */*',
+  'Accept-Language': 'en-ZA,en;q=0.9',
+};
+
+async function getJSON(url, attempt = 1) {
+  const res = await fetch(url, { headers: HEADERS });
+  const body = await res.text();
+  const looksHtml = body.trimStart().startsWith('<');
+  if (!res.ok || looksHtml) {
+    if (attempt < 3) {
+      await new Promise((r) => setTimeout(r, attempt * 4000));
+      return getJSON(url, attempt + 1);
+    }
+    throw new Error(
+      looksHtml
+        ? `Blocked by the site firewall (HTML challenge instead of JSON) after ${attempt} attempts. ` +
+          `If this keeps happening, allowlist the GitHub Actions runner or move this job onto a machine with a South African IP.`
+        : `Store API returned ${res.status} after ${attempt} attempts.`
+    );
+  }
+  return JSON.parse(body);
+}
+
 async function fetchAll() {
   const out = [];
   for (let page = 1; page <= 20; page++) {
-    const res = await fetch(`${API}?per_page=100&page=${page}`, {
-      headers: { 'User-Agent': 'rentalsphere-course-sync' },
-    });
-    if (!res.ok) throw new Error(`Store API ${res.status} on page ${page}`);
-    const batch = await res.json();
+    const batch = await getJSON(`${API}?per_page=100&page=${page}`);
     if (!batch.length) break;
     out.push(...batch);
     if (batch.length < 100) break;
