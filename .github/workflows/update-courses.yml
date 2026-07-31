@@ -1,0 +1,37 @@
+name: Update course list
+
+# Rebuilds data/courses.json from the live rentalsphere.co.za catalogue so
+# Fundi always answers from the real shop rather than a hand-typed list.
+on:
+  schedule:
+    - cron: '20 2 * * *' # 04:20 SAST daily
+  workflow_dispatch: # lets Shaun or Matt run it on demand from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Rebuild courses.json
+        run: node scripts/build-courses.mjs
+
+      - name: Commit if the catalogue changed
+        run: |
+          if git diff --quiet -- data/courses.json; then
+            echo "No catalogue changes."
+            exit 0
+          fi
+          COUNT=$(node -e "console.log(require('./data/courses.json')._meta.count)")
+          git config user.name  "rentalsphere-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/courses.json
+          git commit -m "Update course list from live catalogue (${COUNT} courses)"
+          git push

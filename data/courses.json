@@ -1,0 +1,362 @@
+{
+  "_meta": {
+    "purpose": "Single source of truth for Fundi course answers. Generated from the live catalogue, do not hand-edit.",
+    "generated": "2026-07-31",
+    "source": "rentalsphere.co.za WooCommerce Store API",
+    "currency": "ZAR",
+    "count": 28,
+    "note": "Course codes get reused for new courses, so match on url or id, never on code alone."
+  },
+  "courses": [
+    {
+      "code": "RS302",
+      "title": "🚀 Onboarding New Landlords & Properties – Setting the Relationship up for Success RS302/250211)",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/%f0%9f%9a%80-onboarding-new-landlords-properties-setting-the-relationship-up-for-success-rs302-250211/",
+      "categories": [
+        "Level 2 (Beginners)",
+        "On-Demand Training"
+      ],
+      "short_description": "Master the art of onboarding new landlords and rental properties in this expert-led 2-hour live MasterClass + Q&A! Learn how to qualify leads, conduct effective landlord meetings, perform accurate market appraisals, and secure mandates with confidence. Gain insights into Shaun Luyt’s proven step-by-",
+      "id": 42362
+    },
+    {
+      "code": "RP100",
+      "title": "CORE Programme — Comprehensive Overview of Rental Management Essentials (RP100)",
+      "price": 1999,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/core-rental-management-training/",
+      "categories": [
+        "On-Demand Training",
+        "Level 1 (Beginners)"
+      ],
+      "short_description": "CORE is the only structured training programme built specifically for the South African rental industry — covering everything a new rental team member needs to know to operate competently, compliantly, and confidently from day one. 6 on-demand episodes · 10+ hours of expert-led content · Certificate",
+      "id": 46400
+    },
+    {
+      "code": "RS501",
+      "title": "FICA COMPLIANCE WORKSHOP SERIES - Your Step-by-Step Guide to FICA Compliance (RS501)",
+      "price": 999,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/fica-compliance-workshop-series-your-step-by-step-guide-to-fica-compliance-rs501/",
+      "categories": [
+        "Level 4 (Advanced)"
+      ],
+      "short_description": "A series of 4 workshops focussing on a practical approach to help attendees implement FICA correctly to ensure full FICA Compliance for their rental operations. Taking into consideration the cost of directly contracting a Specialist Regulatory Compliance Consultant of Melanie's calibre to assist you",
+      "id": 39722
+    },
+    {
+      "code": null,
+      "title": "IN PERSON WORKSHOP | Johannesburg: THE END OF THE LEASE, BEST PRACTICE TENANT EXIT PROCESS & DEPOSIT DISPUTES",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/in-person-workshop-johannesburg-the-end-of-the-lease-best-practice-tenant-exit-process-deposit-disputes/",
+      "categories": [
+        "Onsite Training"
+      ],
+      "short_description": "🚪 Master the tenant exit process with RentalSphere’s Shaun Luyt! 📍 Join this in-person workshop at VDM Attorneys Inc (Jhb) with Shaun, Johlene Wasserman from VDM Attorneys Inc and Elize le Roux from Xpello. 🛠 Learn our Best Practice Exit Process Blueprint, discover when the tenant’s right to repa",
+      "id": 43987
+    },
+    {
+      "code": null,
+      "title": "IN PERSON WORKSHOP | Pretoria: THE END OF THE LEASE, BEST PRACTICE TENANT EXIT PROCESS & DEPOSIT CLAIMS",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/in-person-workshop-pretoria-the-end-of-the-lease-best-practice-tenant-exit-process-deposit-claims/",
+      "categories": [
+        "Online Training - LIVE"
+      ],
+      "short_description": "🚪 Master the tenant exit process with RentalSphere’s Shaun Luyt! 📍 Join this in-person workshop at JJR Attorneys (Pta) with Shaun, an expert rental attorney from JJR Attorneys Inc, and Elize le Roux from Xpello. 🛠 Learn our Best Practice Exit Process Power Pack, discover when the tenant’s right t",
+      "id": 43986
+    },
+    {
+      "code": "RP302",
+      "title": "MASTERCLASS | Win More Rental Mandates (RP302)",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/masterclass-win-more-rental-mandates-rp302/",
+      "categories": [
+        "Online Training - LIVE"
+      ],
+      "short_description": "Revealing the strategy to convert more landlord enquiries into signed mandates. 📅 21 July 2026 ⏱ 09:00, 2.5 hrs 💻 Live on Zoom Facilitator: Shaun Luyt You’re one step away from securing your seat. Pay securely via Paystack. You'll be redirected to Paystack's secure site to pay, so we never see or ",
+      "id": 46984
+    },
+    {
+      "code": "RS203",
+      "title": "MASTERCLASS: Unpacking the Rental Housing Act Unfair Practice Regulations (RS203/241022)",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/masterclass-unpacking-the-rental-housing-act-unfair-practice-regulations-rs203-241017/",
+      "categories": [
+        "On-Demand Training",
+        "Level 2 (Beginners)"
+      ],
+      "short_description": "Join our live webinar on the Unfair Practice Regulations, essential for rental agents, business owners, and compliance officers. Learn to navigate the rules that flow from the Rental Housing Act, ensuring you stay compliant and avoid legal pitfalls. This session will cover lease obligations, mainten",
+      "id": 41714
+    },
+    {
+      "code": "RS205",
+      "title": "Mastering Lease Agreements: Essential Knowledge for Rental Professionals (RS205/241105)",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/mastering-lease-agreements-essential-knowledge-for-rental-professionals-rs205-241022/",
+      "categories": [
+        "On-Demand Training",
+        "Level 2 (Beginners)"
+      ],
+      "short_description": "Understand your lease agreements like never before! This MasterClass is designed to give rental agents and support staff a comprehensive understanding of lease agreements, ensuring you can confidently explain terms, enforce conditions, and manage the landlord-tenant relationship effectively. All att",
+      "id": 41716
+    },
+    {
+      "code": "PPP1",
+      "title": "Pro Power Pack #1 - Win More Quality Mandates (PPP1)",
+      "price": 1499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/pro-power-pack-1-win-more-quality-mandates-ppp1/",
+      "categories": [
+        "Pro Power Pack"
+      ],
+      "short_description": "The complete, white-labelled system for winning and setting up quality rental mandates — from a landlord's first enquiry to a signed mandate. 📦 25 documents ⚡ Instant ZIP download ✏️ Editable & white-label Instant download the moment your payment clears. Inside: the onboarding checklist, forms, lan",
+      "id": 47316
+    },
+    {
+      "code": null,
+      "title": "Rental Realities Ep. - 1 Marketing & Selling a Tenanted Property",
+      "price": 0,
+      "free": true,
+      "url": "https://rentalsphere.co.za/product/selling-tenanted-property-south-africa/",
+      "categories": [
+        "On-Demand Training",
+        "Rental Realities"
+      ],
+      "short_description": "In this free Rental Realities session, we unpack real-world scenarios that rental agents and agencies face when marketing and selling properties with tenants in place. From notice requirements and early occupation demands to deposits, bank sales, arrears, and landlord clauses — this session highligh",
+      "id": 45494
+    },
+    {
+      "code": null,
+      "title": "Rental Realities Ep. 2 - Residential Rentals & Unfair Discrimination",
+      "price": 0,
+      "free": true,
+      "url": "https://rentalsphere.co.za/product/rental-realities-ep-2-residential-rentals-unfair-discrimination/",
+      "categories": [
+        "On-Demand Training",
+        "Rental Realities"
+      ],
+      "short_description": "Discrimination in rentals is not always obvious — but the risk is very real. In this free Rental Realities session, we unpack practical, real-world scenarios that rental agents and agencies are facing daily. From advertising wording to screening decisions, landlord instructions, and body corporate r",
+      "id": 45498
+    },
+    {
+      "code": null,
+      "title": "Rental Realities Ep. 3: The CPA & Rentals – The Ordinary Course of Business",
+      "price": 0,
+      "free": true,
+      "url": "https://rentalsphere.co.za/product/rental-realities-ep-3-the-cpa-rentals-the-ordinary-course-of-business/",
+      "categories": [
+        "On-Demand Training",
+        "Rental Realities"
+      ],
+      "short_description": "The CPA test for residential leases has changed — and it directly impacts how rental agents advise landlords. In this episode, Marlon Shevelew (attorney in Els v Venter) unpacks what the judgment means in practice, where agents are getting it wrong, and how to approach leases and mandates going forw",
+      "id": 45787
+    },
+    {
+      "code": null,
+      "title": "REPLAY: FREE Webinar for Rental Agents: Protecting Your Landlords in Times of Market Fluctuations",
+      "price": 0,
+      "free": true,
+      "url": "https://rentalsphere.co.za/product/free-info-session-for-rental-agents-protecting-your-landlords-in-times-of-market-fluctuations/",
+      "categories": [
+        "On-Demand Training",
+        "Online Training"
+      ],
+      "short_description": "🎟️ FREE – Replay NOW Available! Join Shaun Luyt (RentalSphere) & Elize le Roux (Xpello) for an exclusive 45-minute session designed specifically for rental agents. Learn how to educate landlords, mitigate financial risks, and strengthen tenant vetting in today’s challenging market. ✅ The latest ren",
+      "id": 42429
+    },
+    {
+      "code": "RS101",
+      "title": "RS101 | ON-DEMAND COURSE | Drafting Residential Lease Agreements Correctly (South Africa)",
+      "price": 999,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/rs101-expert-residential-lease-drafting-south-africa/",
+      "categories": [
+        "On-Demand Training"
+      ],
+      "short_description": "Learn how to draft watertight, legally compliant lease agreements that protect your landlords, your agency, and yourself. This on-demand course unpacks the anatomy of a lease, the legal framework that governs it, and the most common drafting mistakes agents make. Featuring expert insights from renta",
+      "id": 43756
+    },
+    {
+      "code": "RS201",
+      "title": "RS201 | THE PROPERTY PRACTITIONERS ACT & REGULATIONS | What EVERY Rental Professional NEEDS to KNOW! (241008)",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/rs201-the-property-practitioners-act-regulations-what-every-rental-professional-needs-to-know-20241008/",
+      "categories": [
+        "On-Demand Training",
+        "Level 2 (Beginners)"
+      ],
+      "short_description": "THE PROPERTY PRACTITIONERS ACT & REGULATIONS - COMPLIANCE IS NON-NEGOTIABLE FOR RENTAL PROFESSIONALS 🛑 Stay compliant, protect your career! This 2-part online course covers everything rental professionals need to know about the Property Practitioners Act & Regulations, helping you avoid penalties a",
+      "id": 36665
+    },
+    {
+      "code": "RS202",
+      "title": "RS202 | UNPACKING THE RENTAL HOUSING ACT | 📜 Essential Compliance for Rental Agents, Support Staff, Landlords & Investors 🏠 (241015)",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/rs202-unpacking-the-rental-housing-act-essential-compliance-for-rental-agents-support-staff-landlords-investors-241015/",
+      "categories": [
+        "On-Demand Training",
+        "Level 2 (Beginners)"
+      ],
+      "short_description": "Gain mastery over the Rental Housing Act! This course, ideal for rental agents, support staff, landlords, and property investors, covers legal rights, fair practices, inspections, deposit handling and lease essentials,equipping you to manage properties with full compliance. 📘💼",
+      "id": 37215
+    },
+    {
+      "code": "RS204",
+      "title": "RS204 - FICA ESSENTIALS for Residential Rental Pros",
+      "price": 0,
+      "free": true,
+      "url": "https://rentalsphere.co.za/product/rs204-fica-essentials-for-residential-rental-pros-20231026/",
+      "categories": [
+        "Level 2 (Beginners)",
+        "On-Demand Training"
+      ],
+      "short_description": "The FICA ESSENTIALS that EVERY residential rental professional NEEDS to know! **Certificate of Completion issued on Completion**",
+      "id": 39655
+    },
+    {
+      "code": "RS206",
+      "title": "RS206 POPIA & Data Privacy for Real Estate Businesses & Staff - An Overview - by Specialist Regulatory Consultant, Melanie Coetzee (RS206/240405)",
+      "price": 0,
+      "free": true,
+      "url": "https://rentalsphere.co.za/product/rs206-popia-data-privacy-for-real-estate-businesses-staff-an-overview-by-specialist-regulatory-consultant-melanie-coetzee-rs206-240405/",
+      "categories": [
+        "Level 2 (Beginners)",
+        "On-Demand Training"
+      ],
+      "short_description": "POPIA for Real Estate Agents - An Introduction & Overview of what's required . . . ** Presented by Specialist Regulatory Compliance Consultant & hosted by RentalSphere ** **Certificate of Completion Issued on Completion**",
+      "id": 40494
+    },
+    {
+      "code": null,
+      "title": "RS303 MasterClass: Tools, Tips & Strategies for Marketing & Tenanting Rental Properties",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/rs303-masterclass-tools-tips-strategies-for-marketing-tenanting-rental-properties/",
+      "categories": [
+        "On-Demand Training"
+      ],
+      "short_description": "Are you tired of struggling to bridge the gap between landlord expectations and market realities in rental property marketing? Don't miss out on this live MasterClass where we will demonstrate the ultimate set of tools, tips & strategies to accelerate your tenanting game! Join renowned rental expert",
+      "id": 41155
+    },
+    {
+      "code": "RS304",
+      "title": "RS304 | 🎯 MASTERING RENTAL APPLICATIONS 📝🔍 BEST PRACTICE VETTING WORKSHOP (2508)",
+      "price": 999,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/rs304-masterclass-rental-applications-applicant-vetting-250812/",
+      "categories": [
+        "On-Demand Training"
+      ],
+      "short_description": "Master tenant vetting with confidence! This interactive workshop covers best practice & fully compliant tenant vetting, spotting fraudulent documents, supporting landlords through life changes, ongoing credit monitoring, and the latest AI-powered screening tools — presented by industry experts.",
+      "id": 40711
+    },
+    {
+      "code": "RS307",
+      "title": "RS307 Masterclass: Entry and Exit Inspections, Rental Deposits, and Damages (RS307/240326)",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/masterclass-entry-and-exit-inspections-rental-deposits-and-damages-rs307/",
+      "categories": [
+        "On-Demand Training"
+      ],
+      "short_description": "Enhance your rental management skills with our exclusive masterclass on entry and exit inspections, rental deposits, and damages. Learn the ins and outs of effective inspections and reporting, dispel common myths, and navigate legal requirements with confidence. Enroll now to unlock expert insights ",
+      "id": 40417
+    },
+    {
+      "code": "RS309",
+      "title": "RS309 MasterClass: Managing Rent & Other Arrears & Other Breaches of the Lease Agreement (RS309/240507)",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/rs309-masterclass-managing-rent-other-arrears-other-breaches-of-the-lease-agreement-rs309-240507/",
+      "categories": [
+        "On-Demand Training"
+      ],
+      "short_description": "Equip yourself with the knowledge and skills to manage rent arrears and breaches of lease agreements the right way. Join our Rental Masterclass explore legalities, best practices, and proactive strategies for minimizing risks and maximizing outcomes. Elevate your expertise and safeguard landlord int",
+      "id": 40736
+    },
+    {
+      "code": "RS310",
+      "title": "RS310 MasterClass: 📜 The End of the Fixed Term Lease & Lease Renewals: Are you SURE you’re COMPLIANT with Section 14 of the CPA? 🚀 (RS310)",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/rs310-masterclass-the-end-of-the-fixed-term-lease-lease-renewals-are-you-sure-youre-compliant-with-section-14-of-the-cpa-rs310/",
+      "categories": [
+        "On-Demand Training"
+      ],
+      "short_description": "Master the intricacies of fixed-term leases and lease renewals with our exclusive MasterClass tailored for rental agents and support staff. Gain insights into legislative requirements, best practices, and recent updates to ensure compliance and mitigate risks effectively. *All attendees get a compli",
+      "id": 40080
+    },
+    {
+      "code": "RS311",
+      "title": "RS311 - MasterClass: Managing the Early Terminations of Fixed Term Leases the Right Way (RS311/240319)",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/masterclass-managing-the-early-terminations-of-fixed-term-leases-the-right-way-rs311/",
+      "categories": [
+        "On-Demand Training"
+      ],
+      "short_description": "Stay ahead of the curve with our MasterClass on early termination of fixed-term leases in South Africa. Gain insights into tenants' rights under the Consumer Protection Act, a recent ruling wrt early cancellation penalties, and best practices in lease terminations. Plus, receive our exclusive pack o",
+      "id": 40412
+    },
+    {
+      "code": "RS312",
+      "title": "RS312 MasterClass: Managing the Tenant Exit Process the Right Way to Avoid the Avoidable Disputes (RS312/240417)",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/rs312-masterclass-managing-the-tenant-exit-process-the-right-way-to-avoid-the-avoidable-disputes-rs312-240417/",
+      "categories": [
+        "On-Demand Training"
+      ],
+      "short_description": "Empower yourself with the knowledge to navigate the tenant exit process smoothly and avoid deposit disputes! Join our masterclass for in-depth guidance, compliance tools, and communication templates. Take control of your leasing experience today!",
+      "id": 40743
+    },
+    {
+      "code": null,
+      "title": "RS502 Webinar Series: A DEEP Dive into POPIA & Data Privacy for Real Estate Agencies - Everything you NEED to know!",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/rs502-webinar-series-a-deep-dive-into-popia-data-privacy-for-real-estate-agencies-everything-you-need-to-know/",
+      "categories": [
+        "On-Demand Training"
+      ],
+      "short_description": "In this 3 part webinar series renowned expert regulatory compliance consultant Melanie Coetzee will be guiding us on a DEEP dive into POPIA & Data Privacy for Real Estate Businesses. Please see below for full info on what will be covered. **Want to book for your entire team? Click here to WhatsApp u",
+      "id": 40826
+    },
+    {
+      "code": "RTC2418",
+      "title": "RTC 2418/241010 | MOULD IN RENTAL PROPERTIES - Causes, Dangers & Solutions",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/rtc-2418-241010-mould-in-rental-properties-causes-dangers-solutions/",
+      "categories": [
+        "On-Demand Training",
+        "Level 2 (Beginners)"
+      ],
+      "short_description": "Unlock the secrets to identifying, managing, and preventing mold in rental properties with Marisia Robus, CEO of Gauteng Property Inspections. This expert-led course equips rental professionals with essential knowledge on the causes, dangers, and effective solutions for mold, ensuring a healthier li",
+      "id": 41912
+    },
+    {
+      "code": "RTC2420",
+      "title": "RTC2420/241107 | TENANT ARRESTS AND ILLEGAL ACTIVITY: GUIDANCE FOR RENTAL AGENTS ON SUPPORTING LANDLORDS IN COMPLEX SITUATIONS",
+      "price": 499,
+      "free": false,
+      "url": "https://rentalsphere.co.za/product/rtc2420-241107-tenant-arrests-and-illegal-activity-guidance-for-rental-agents-on-supporting-landlords-in-complex-situations/",
+      "categories": [
+        "On-Demand Training",
+        "Online Training"
+      ],
+      "short_description": "📚 Master Tenant Management Challenges! Learn how to handle tenant arrests and illegal activity with expert guidance from Ismaiel Mohamed, rental law specialist. This webinar dives into legal compliance, eviction protocols, and maintaining professionalism. Access actionable strategies to support lan",
+      "id": 42187
+    }
+  ]
+}

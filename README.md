@@ -65,3 +65,20 @@ Commit the change. GitHub Pages updates automatically. The WordPress iframe then
 - This version separates the data into `data/archive.json`, so the front-end does not need to be edited for every content update.
 - The visible archive count and legislation filter are generated dynamically from the JSON.
 - Current starting data: 84 resources, including 48 Inner Circle episodes and 36 blog articles.
+
+## Course list (data/courses.json)
+
+`data/courses.json` is generated from the live rentalsphere.co.za catalogue and
+is the single source of truth for Fundi's course answers.
+
+- Rebuilt automatically every day by `.github/workflows/update-courses.yml`,
+  and on demand from the Actions tab ("Update course list" > Run workflow).
+- Regenerate locally with `node scripts/build-courses.mjs`.
+- **Do not hand-edit it.** The previous hand-maintained list drifted until four
+  of its ten product links were dead and one course code described a course
+  that no longer existed.
+- Course codes get reused for new courses, so match on `url` or `id`, never on
+  `code` alone.
+
+Raw URL for consumers:
+`https://raw.githubusercontent.com/Matt-Digin-Ai/rentalsphere-brand-public/main/data/courses.json`
