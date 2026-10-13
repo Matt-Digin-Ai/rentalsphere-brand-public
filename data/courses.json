@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Single source of truth for Fundi course answers. Generated from the live catalogue, do not hand-edit.",
-    "generated": "2026-10-12",
+    "generated": "2026-10-13",
     "source": "rentalsphere.co.za WooCommerce Store API",
     "currency": "ZAR",
     "count": 29,
@@ -188,7 +188,7 @@
     {
       "code": "RS101",
       "title": "RS101 | ON-DEMAND COURSE | Drafting Residential Lease Agreements Correctly (South Africa)",
-      "price": 999,
+      "price": 499,
       "free": false,
       "url": "https://rentalsphere.co.za/product/rs101-expert-residential-lease-drafting-south-africa/",
       "categories": [
