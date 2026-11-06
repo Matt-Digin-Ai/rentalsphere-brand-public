@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Single source of truth for Fundi course answers. Generated from the live catalogue, do not hand-edit.",
-    "generated": "2026-11-05",
+    "generated": "2026-11-06",
     "source": "rentalsphere.co.za WooCommerce Store API",
     "currency": "ZAR",
     "count": 29,
@@ -264,7 +264,7 @@
     {
       "code": "RS304",
       "title": "RS304 | 🎯 MASTERING RENTAL APPLICATIONS 📝🔍 BEST PRACTICE VETTING WORKSHOP (2508)",
-      "price": 999,
+      "price": 749,
       "free": false,
       "url": "https://rentalsphere.co.za/product/rs304-masterclass-rental-applications-applicant-vetting-250812/",
       "categories": [
