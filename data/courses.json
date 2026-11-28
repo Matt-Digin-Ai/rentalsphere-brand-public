@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Single source of truth for Fundi course answers. Generated from the live catalogue, do not hand-edit.",
-    "generated": "2026-11-26",
+    "generated": "2026-11-28",
     "source": "rentalsphere.co.za WooCommerce Store API",
     "currency": "ZAR",
     "count": 29,
@@ -24,7 +24,7 @@
     {
       "code": "RP100",
       "title": "CORE Programme — Comprehensive Overview of Rental Management Essentials (RP100)",
-      "price": 1999,
+      "price": 999,
       "free": false,
       "url": "https://rentalsphere.co.za/product/core-rental-management-training/",
       "categories": [
@@ -188,7 +188,7 @@
     {
       "code": "RS101",
       "title": "RS101 | ON-DEMAND COURSE | Drafting Residential Lease Agreements Correctly (South Africa)",
-      "price": 999,
+      "price": 499,
       "free": false,
       "url": "https://rentalsphere.co.za/product/rs101-expert-residential-lease-drafting-south-africa/",
       "categories": [
@@ -264,7 +264,7 @@
     {
       "code": "RS304",
       "title": "RS304 | 🎯 MASTERING RENTAL APPLICATIONS 📝🔍 BEST PRACTICE VETTING WORKSHOP (2508)",
-      "price": 749,
+      "price": 374,
       "free": false,
       "url": "https://rentalsphere.co.za/product/rs304-masterclass-rental-applications-applicant-vetting-250812/",
       "categories": [
